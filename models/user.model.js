@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     role: {type:String, enum:['Admin', 'Member'], default:'Member' },
     name: {type:String, require:true},
     email: {type:String, unique:true, require:true},
-    borrowedBooks: {}
+    borrowedBooks: {type: String, require: true}
     // borrowedBooks (Array of Book references)
 
 },{
